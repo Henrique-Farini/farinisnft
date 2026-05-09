@@ -10,13 +10,14 @@
     --border:rgba(0,0,0,0.08);
 
     --shadow-sm:0 10px 30px rgba(0,0,0,0.06);
+    --shadow-md:0 20px 50px rgba(0,0,0,0.10);
     --shadow-lg:0 30px 80px rgba(0,0,0,0.12);
 
     --radius:28px;
+    --radius-sm:16px;
 
     --transition:0.35s cubic-bezier(.22,1,.36,1);
 }
-
 *{
     margin:0;
     padding:0;
@@ -697,4 +698,890 @@ footer {
         -webkit-appearance:none;
     }
 
+}/* ===========================
+   NAVBAR MODERNA
+   =========================== */
+/* ===========================
+   REMOVE LINHAS E MELHORA NAV
+   =========================== */
+
+/* navbar limpa */
+.navbar {
+    border-bottom: none !important;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.04);
+
+    background:
+        rgba(255,255,255,0.88);
+
+    backdrop-filter: blur(18px);
+}
+
+/* scroll */
+.navbar.scrolled {
+    border-bottom: none !important;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,0.06);
+}
+
+/* remove linhas dos links */
+.links a,
+.nav-drawer a,
+.logo,
+.btn-primary,
+.btn-outline {
+    text-decoration: none !important;
+
+    border: none;
+}
+
+/* remove linha azul de clique */
+a,
+button,
+input,
+textarea,
+select {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* links desktop */
+.links a {
+    position: relative;
+
+    background: transparent;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+/* hover suave */
+.links a:hover {
+    background:
+        rgba(15,33,130,.05);
+
+    color: #0f2182;
+}
+
+/* remove qualquer pseudo linha */
+.links a::before,
+.links a::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* botão about */
+.links .btn-primary {
+    color: #fff !important;
+}
+
+/* drawer mobile */
+.nav-drawer {
+    border-top: none !important;
+    border-bottom: none !important;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.06);
+}
+
+/* ===========================
+   FIX BOTÃO ABOUT
+   =========================== */
+
+/* botão about */
+.links .btn-primary {
+    background: #0f2182 !important;
+    color: #ffffff !important;
+
+    border: 2px solid #0f2182 !important;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+}
+
+/* hover */
+.links .btn-primary:hover {
+    background: #1a30a0 !important;
+    border-color: #1a30a0 !important;
+    color: #ffffff !important;
+}
+
+/* mobile */
+.nav-drawer .btn-primary {
+    background: #0f2182 !important;
+    color: #ffffff !important;
+
+    border: 2px solid #0f2182 !important;
+}
+/* links mobile */
+.nav-drawer a {
+    border: none !important;
+
+    background: transparent;
+}
+
+/* hover mobile */
+.nav-drawer a:hover {
+    background:
+        rgba(15,33,130,.05);
+}
+
+/* remove linhas dos botões */
+.btn-primary,
+.btn-outline {
+    box-shadow: none;
+}
+
+/* hover elegante */
+.btn-primary:hover {
+    box-shadow:
+        0 10px 25px rgba(15,33,130,.20);
+}
+
+.btn-outline:hover {
+    box-shadow:
+        0 10px 25px rgba(15,33,130,.16);
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 clamp(20px, 5%, 80px);
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* efeito ao scroll */
+.navbar.scrolled {
+    background: rgba(255,255,255,0.98);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.05);
+
+    border-bottom-color:
+        rgba(0,0,0,0.08);
+}
+
+/* ===========================
+   LOGO
+   =========================== */
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #0f2182;
+
+    letter-spacing: -0.03em;
+
+    transition: .3s ease;
+}
+
+.logo:hover {
+    opacity: .8;
+}
+
+/* ===========================
+   LINKS
+   =========================== */
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.links a {
+    position: relative;
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #666;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+/* hover */
+.links a:hover {
+    background: rgba(15, 33, 130, 0.06);
+
+    color: #0f2182;
+
+    transform: translateY(-1px);
+}
+
+/* link ativo */
+.links a.active {
+    background: rgba(15, 33, 130, 0.08);
+    color: #0f2182;
+}
+
+/* ===========================
+   BOTÕES NAV
+   =========================== */
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* botão outline */
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border: 2px solid #0f2182;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #0f2182;
+
+    transition: .3s ease;
+}
+
+.btn-outline:hover {
+    background: #0f2182;
+    color: #fff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(15,33,130,.18);
+}
+
+/* botão primary */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    background: #0f2182;
+
+    border: 2px solid #0f2182;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #fff;
+
+    transition: .3s ease;
+}
+
+.btn-primary:hover {
+    background: #1a30a0;
+
+    border-color: #1a30a0;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(15,33,130,.22);
+}
+
+/* ===========================
+   MENU MOBILE
+   =========================== */
+
+.nav-toggle {
+    display: none;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    background: transparent;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 2px;
+
+    background: #0f2182;
+
+    border-radius: 99px;
+
+    transition: .3s ease;
+}
+
+/* animação X */
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===========================
+   DRAWER MOBILE
+   =========================== */
+
+.nav-drawer {
+    position: fixed;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 24px;
+
+    background: rgba(255,255,255,0.98);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s;
+}
+
+.nav-drawer.open {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.nav-drawer a {
+    padding: 14px 16px;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #444;
+
+    transition: .25s ease;
+}
+
+.nav-drawer a:hover {
+    background: rgba(15,33,130,.06);
+
+    color: #0f2182;
+}
+
+.drawer-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 16px;
+}
+
+/* ===========================
+   RESPONSIVO
+   =========================== */
+
+@media (max-width: 768px) {
+
+    .links,
+    .nav-buttons {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        height: 64px;
+        padding: 0 18px;
+    }
+
+    .nav-drawer {
+        top: 64px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
+/* ===========================
+   RESPONSIVIDADE PREMIUM
+   =========================== */
+
+/* ===========================
+   1200px
+   =========================== */
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 32px;
+    }
+
+    .links {
+        gap: 2px;
+    }
+
+    .links a {
+        padding: 10px 13px;
+        font-size: 14px;
+    }
+
+    .nav-buttons {
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+/* ===========================
+   992px
+   =========================== */
+@media (max-width: 992px) {
+
+    .navbar {
+        height: 68px;
+        padding: 0 24px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .links a {
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+}
+
+/* ===========================
+   MOBILE NAV
+   =========================== */
+@media (max-width: 768px) {
+
+    /* desktop some */
+    .links,
+    .nav-buttons {
+        display: none;
+    }
+
+    /* navbar */
+    .navbar {
+        height: 64px;
+
+        padding: 0 18px;
+
+        backdrop-filter: blur(20px);
+
+        background: rgba(255,255,255,0.94);
+
+        border-bottom:
+            1px solid rgba(0,0,0,0.06);
+    }
+
+    /* logo */
+    .logo {
+        font-size: 23px;
+        letter-spacing: -0.03em;
+    }
+
+    /* botão menu */
+    .nav-toggle {
+        display: flex;
+
+        width: 44px;
+        height: 44px;
+
+        border-radius: 14px;
+
+        transition: .25s ease;
+    }
+
+    .nav-toggle:hover {
+        background:
+            rgba(15,33,130,.05);
+    }
+
+    .nav-toggle span {
+        width: 23px;
+        height: 2px;
+    }
+
+    /* drawer */
+    .nav-drawer {
+        position: fixed;
+
+        top: 64px;
+        left: 0;
+
+        width: 100%;
+
+        padding:
+            18px
+            18px
+            26px;
+
+        background:
+            rgba(255,255,255,0.98);
+
+        backdrop-filter: blur(20px);
+
+        border-bottom:
+            1px solid rgba(0,0,0,0.06);
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+
+        opacity: 0;
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform:
+            translateY(-12px);
+
+        transition:
+            opacity .28s ease,
+            transform .28s ease,
+            visibility .28s ease;
+    }
+
+    .nav-drawer.open {
+        opacity: 1;
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    /* links drawer */
+    .nav-drawer a {
+        display: flex;
+        align-items: center;
+
+        min-height: 54px;
+
+        padding: 14px 16px;
+
+        border-radius: 16px;
+
+        font-size: 15px;
+        font-weight: 500;
+
+        color: #333;
+
+        transition:
+            background .25s ease,
+            color .25s ease,
+            transform .25s ease;
+    }
+
+    .nav-drawer a:hover,
+    .nav-drawer a:active {
+        background:
+            rgba(15,33,130,.06);
+
+        color: #0f2182;
+
+        transform: translateX(4px);
+    }
+
+    /* botões drawer */
+    .drawer-actions {
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+
+        margin-top: 14px;
+    }
+
+    .drawer-actions .btn-primary,
+    .drawer-actions .btn-outline {
+        width: 100%;
+
+        min-height: 52px;
+
+        border-radius: 16px;
+
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+/* ===========================
+   480px
+   =========================== */
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 60px;
+
+        padding: 0 14px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-toggle span {
+        width: 22px;
+    }
+
+    .nav-drawer {
+        top: 60px;
+
+        padding:
+            16px
+            14px
+            22px;
+    }
+
+    .nav-drawer a {
+        min-height: 50px;
+
+        padding: 12px 14px;
+
+        font-size: 14px;
+
+        border-radius: 14px;
+    }
+
+    .drawer-actions .btn-primary,
+    .drawer-actions .btn-outline {
+        min-height: 50px;
+
+        font-size: 14px;
+    }
+}
+
+/* ===========================
+   TELAS MUITO PEQUENAS
+   =========================== */
+@media (max-width: 360px) {
+
+    .navbar {
+        padding: 0 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-drawer {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .nav-drawer a {
+        font-size: 13px;
+    }
+}
+
+/* ===========================
+   MELHORIAS TOUCH
+   =========================== */
+@media (hover: none) {
+
+    .links a:hover,
+    .btn-primary:hover,
+    .btn-outline:hover,
+    .nav-drawer a:hover,
+    .nav-toggle:hover {
+        transform: none !important;
+    }
+}
+
+/* ===========================
+   SAFE AREA IOS
+   =========================== */
+@supports (padding: max(0px)) {
+
+    .navbar {
+        padding-left:
+            max(18px, env(safe-area-inset-left));
+
+        padding-right:
+            max(18px, env(safe-area-inset-right));
+    }
+
+    .nav-drawer {
+        padding-left:
+            max(18px, env(safe-area-inset-left));
+
+        padding-right:
+            max(18px, env(safe-area-inset-right));
+    }
+}
+/* ===========================
+   FIX BOTÃO LOGIN
+   =========================== */
+
+.nav-buttons .btn-outline,
+.drawer-actions .btn-outline {
+    background: transparent !important;
+
+    color: #0f2182 !important;
+
+    border: 2px solid #0f2182 !important;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+}
+
+/* hover */
+.nav-buttons .btn-outline:hover,
+.drawer-actions .btn-outline:hover {
+    background: #0f2182 !important;
+    color: #ffffff !important;
+}
+/* ===========================
+   REMOVE AZUL AO CLICAR
+   =========================== */
+
+* {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    tap-highlight-color: transparent !important;
+}
+
+/* remove focus azul */
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:focus,
+textarea:focus,
+select:focus,
+:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* remove fundo azul no mobile */
+a,
+button {
+    background-clip: padding-box;
+}
+
+/* safari / ios */
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-appearance: none;
+    appearance: none;
 }

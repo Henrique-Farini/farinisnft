@@ -11,6 +11,34 @@
     
 </head>
 <body>
+     <nav class="navbar" id="navbar">
+        <a href="#" class="logo">Farini's</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html?#marketplace">Marketplace</a>
+            <a href="../index.html?#gallery">Gallery</a>
+            <a href="../About/about.html" class="btn-primary">About</a>
+        </div>
+        <div class="nav-buttons">
+            <a href="../CreateAccount/auth.html" class="btn-outline">Login</a>
+            <a href="../CreateAccount/auth.html?mode=register" class="btn-primary">Get Started</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+        <a href="../index.html">Home</a>
+        <a href="../index.html?#marketplace">Marketplace</a>
+        <a href="../index.html?#gallery">Gallery</a>
+        <a href="../About/about.html">About</a>
+        <div class="drawer-actions">
+            <a href="../CreateAccount/auth.html" class="btn-outline">Login</a>
+            <a  href="../CreateAccount/auth.html?mode=register" class="btn-primary">Get Started</a>
+        </div>
+    </div>
+
 
     <section class="product-page">
 
@@ -212,5 +240,6 @@
     </footer>
 
   <script src="script.js"></script>
+    <script src="product.js"></script>
 </body>
 </html>

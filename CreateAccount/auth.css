@@ -1,0 +1,583 @@
+/* ===========================
+   RESET
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --blue:#0f2182;
+    --blue-mid:#1a30a0;
+    --accent:#4d7cff;
+    --white:#ffffff;
+    --bg:#f5f7fb;
+    --text:#111111;
+    --text-muted:#666666;
+    --border:rgba(0,0,0,0.08);
+
+    --shadow-sm:0 8px 24px rgba(0,0,0,0.06);
+    --shadow-lg:0 20px 60px rgba(15,33,130,0.12);
+
+    --radius-md:18px;
+    --radius-lg:28px;
+
+    --transition:.3s cubic-bezier(.4,0,.2,1);
+}
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    min-height:100vh;
+    background:var(--bg);
+    font-family:'Ubuntu',sans-serif;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:40px 20px;
+
+    position:relative;
+}
+
+/* ===========================
+   GLOW
+=========================== */
+.bg-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    pointer-events:none;
+}
+
+.glow-1{
+    width:400px;
+    height:400px;
+
+    background:rgba(15,33,130,0.12);
+
+    top:-100px;
+    left:-100px;
+}
+
+.glow-2{
+    width:350px;
+    height:350px;
+
+    background:rgba(77,124,255,0.12);
+
+    bottom:-120px;
+    right:-80px;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+.auth-section{
+    width:100%;
+    max-width:1250px;
+    position:relative;
+    z-index:2;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+.auth-container{
+    background:rgba(255,255,255,0.82);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-lg);
+
+    display:grid;
+    grid-template-columns:1fr 520px;
+}
+
+/* ===========================
+   LEFT
+=========================== */
+.auth-left{
+    padding:70px;
+    background:
+    linear-gradient(
+        135deg,
+        #0f2182 0%,
+        #162b9c 100%
+    );
+
+    position:relative;
+    overflow:hidden;
+}
+
+.auth-left::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(255,255,255,0.15),
+        transparent 40%
+    );
+}
+
+.auth-badge{
+    width:max-content;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,0.1);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    color:#fff;
+
+    font-size:13px;
+    font-weight:600;
+
+    margin-bottom:34px;
+}
+
+.auth-left h1{
+    font-size:clamp(42px,5vw,74px);
+    line-height:.95;
+    letter-spacing:-.05em;
+
+    color:#fff;
+
+    margin-bottom:24px;
+}
+
+.auth-left h1 span{
+    color:#9cb4ff;
+    display:block;
+}
+
+.auth-left p{
+    max-width:480px;
+
+    font-size:16px;
+    line-height:1.8;
+
+    color:rgba(255,255,255,0.78);
+
+    margin-bottom:50px;
+}
+
+/* stats */
+.auth-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.auth-stat{
+    flex:1;
+    min-width:140px;
+
+    padding:24px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.auth-stat h3{
+    font-size:30px;
+    color:#fff;
+    margin-bottom:6px;
+}
+
+.auth-stat span{
+    color:rgba(255,255,255,0.7);
+    font-size:14px;
+}
+
+/* ===========================
+   RIGHT
+=========================== */
+.auth-right{
+    padding:50px;
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* ===========================
+   TABS
+=========================== */
+.auth-tabs{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:#f3f5fb;
+
+    border-radius:18px;
+
+    padding:6px;
+
+    margin-bottom:40px;
+}
+
+.tab-btn{
+    position:relative;
+    z-index:2;
+
+    height:54px;
+
+    border:none;
+    background:none;
+
+    border-radius:14px;
+
+    font-size:15px;
+    font-weight:700;
+
+    color:#666;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.tab-btn.active{
+    color:var(--blue);
+}
+
+.tab-indicator{
+    position:absolute;
+
+    top:6px;
+    left:6px;
+
+    width:calc(50% - 6px);
+    height:54px;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);
+
+    transition:var(--transition);
+}
+
+.auth-tabs.register-mode .tab-indicator{
+    transform:translateX(100%);
+}
+
+/* ===========================
+   FORM
+=========================== */
+.auth-form{
+    display:none;
+    animation:fade .35s ease;
+}
+
+.auth-form.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:var(--text);
+
+    margin-bottom:10px;
+}
+
+.input-box{
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:0 20px;
+
+    border-radius:18px;
+
+    background:#f7f8fc;
+
+    border:1px solid transparent;
+
+    transition:var(--transition);
+}
+
+.input-box:focus-within{
+    border-color:rgba(15,33,130,0.2);
+    background:#fff;
+
+    box-shadow:
+    0 0 0 4px rgba(15,33,130,0.06);
+}
+
+.input-box i{
+    font-size:20px;
+    color:#777;
+}
+
+.input-box input{
+    width:100%;
+    height:100%;
+
+    border:none;
+    outline:none;
+
+    background:none;
+
+    font-size:15px;
+    font-family:'Ubuntu',sans-serif;
+}
+
+.auth-options{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+
+    margin:6px 0 26px;
+}
+
+.auth-options a{
+    text-decoration:none;
+    color:var(--blue);
+    font-size:14px;
+    font-weight:600;
+}
+
+.remember{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:14px;
+    color:#666;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+.submit-btn{
+    width:100%;
+    height:60px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:var(--blue);
+
+    color:#fff;
+
+    font-size:15px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:
+    0 10px 30px rgba(15,33,130,0.22);
+}
+
+.submit-btn:hover{
+    transform:translateY(-2px);
+    background:var(--blue-mid);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media(max-width:1024px){
+
+    .auth-container{
+        grid-template-columns:1fr;
+    }
+
+    /* LOGIN PRIMEIRO */
+    .auth-right{
+        order:1;
+    }
+
+    /* INFO DEPOIS */
+    .auth-left{
+        order:2;
+    }
+
+    .auth-left{
+        padding:60px 40px;
+    }
+
+    .auth-right{
+        padding:40px;
+    }
+}
+
+@media(max-width:480px){
+
+    .auth-left h1{
+        font-size:42px;
+    }
+
+    .auth-right{
+        padding:24px 18px;
+    }
+
+    .auth-tabs{
+        margin-bottom:28px;
+    }
+
+    .input-box{
+        height:56px;
+    }
+
+    .submit-btn{
+        height:56px;
+    }
+
+    .auth-options{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+img{
+    max-width:100%;
+}
+input{
+    min-width:0;
+}
+
+/* ===========================
+   FIX OVERFLOW MOBILE
+=========================== */
+
+html,
+body{
+    overflow-x:hidden;
+    max-width:100%;
+}
+
+*{
+    min-width:0;
+}
+
+.auth-section{
+    width:100%;
+    overflow:hidden;
+}
+
+.auth-container{
+    width:100%;
+    max-width:1250px;
+    overflow:hidden;
+}
+
+.auth-right,
+.auth-left{
+    min-width:0;
+}
+
+.input-box{
+    width:100%;
+    overflow:hidden;
+}
+
+.input-box input{
+    width:100%;
+    min-width:0;
+}
+
+/* evita zoom azul no mobile */
+button,
+a,
+input{
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    body{
+        padding:20px 12px;
+    }
+
+    .auth-container{
+        border-radius:28px;
+    }
+
+    .auth-left,
+    .auth-right{
+        width:100%;
+        padding:28px 20px;
+    }
+
+    .auth-stats{
+        flex-direction:column;
+    }
+
+    .auth-stat{
+        width:100%;
+    }
+
+    .auth-tabs{
+        width:100%;
+    }
+
+    .tab-btn{
+        font-size:14px;
+    }
+
+    .input-group{
+        width:100%;
+    }
+
+    .submit-btn{
+        width:100%;
+    }
+}

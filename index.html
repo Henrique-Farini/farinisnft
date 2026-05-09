@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +17,11 @@
             <a href="#">Home</a>
             <a href="#marketplace">Marketplace</a>
             <a href="#gallery">Gallery</a>
-             <a href="About/about.html" class="btn-primary">About</a>
+            <a href="About/about.html" class="btn-primary">About</a>
         </div>
         <div class="nav-buttons">
-            <button class="btn-outline">Login</button>
-            <button class="btn-primary">Get Started</button>
+            <a href="CreateAccount/auth.html" class="btn-outline">Login</a>
+            <a href="CreateAccount/auth.html?mode=register" class="btn-primary">Get Started</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -35,8 +34,8 @@
         <a href="#gallery">Gallery</a>
         <a href="About/about.html">About</a>
         <div class="drawer-actions">
-            <button class="btn-outline">Login</button>
-            <button class="btn-primary">Get Started</button>
+            <a href="CreateAccount/auth.html" class="btn-outline">Login</a>
+            <a  href="CreateAccount/auth.html?mode=register" class="btn-primary">Get Started</a>
         </div>
     </div>
 
@@ -49,14 +48,9 @@
             <h1>Buy &amp; Collect <span>Rare NFTs</span></h1>
             <p>Explore exclusive NFT collections from creators around the world. Minimal, modern and secure marketplace.</p>
             <div class="hero-buttons">
-    <a href="#marketplace" class="btn-primary">
-        Explore NFTs
-    </a>
-
-    <a href="#gallery" class="btn-outline">
-        View Gallery
-    </a>
-</div>
+                <a href="#marketplace" class="btn-primary">Explore NFTs</a>
+                <a href="#gallery" class="btn-outline">View Gallery</a>
+            </div>
             <div class="stats" id="statsRow">
                 <div class="stat-box">
                     <h3 data-target="12" data-suffix="K+">0K+</h3>
@@ -84,7 +78,7 @@
                         <p>By Farini Studio</p>
                         <span class="card-price">3.20 ETH</span>
                     </div>
-                    <a href="BuyPages/productreal.html" class="btn-primary">Buy Now</a>            
+                    <a href="BuyPages/productreal.html" class="btn-primary">Buy Now</a>
                 </div>
             </div>
         </div>
@@ -123,7 +117,7 @@
                     <p class="nft-creator">By MetaVault</p>
                     <div class="price">
                         <div class="price-info"><small>Current Price</small><span>2.10 ETH</span></div>
-                           <a href="BuyPages/product2.html" class="btn-primary">Buy</a>
+                        <a href="BuyPages/product2.html" class="btn-primary">Buy</a>
                     </div>
                 </div>
             </article>
@@ -138,124 +132,380 @@
                     <p class="nft-creator">By NeonWave</p>
                     <div class="price">
                         <div class="price-info"><small>Current Price</small><span>0.95 ETH</span></div>
-                           <a href="BuyPages/product3.html" class="btn-primary">Buy</a>
+                        <a href="BuyPages/product3.html" class="btn-primary">Buy</a>
                     </div>
                 </div>
             </article>
         </div>
     </section>
-<section class="gallery" id="gallery">
+
+
+
+   <section class="features">
+
+    <div class="features-content reveal">
+
+        <div class="features-text">
+            <h2>
+                Build your <br>
+                NFT Profile
+            </h2>
+
+            <p>
+                Join thousands of collectors and creators on Farini's.
+                Discover exclusive NFTs, build your digital identity,
+                and explore premium collections.
+            </p>
+
+            <a href="CreateAccount/auth.html?mode=register" class="features-btn">
+                CREATE PROFILE
+            </a>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="features-cards">
+
+                <div class="features-card">
+                    <img src="assets/nft5.jpg" alt="NFT">
+                </div>
+
+                <div class="features-card">
+                    <img src="assets/nft6.jpg" alt="NFT">
+                </div>
+
+                <div class="features-card">
+                    <img src="assets/nft7.jpg" alt="NFT">
+                </div>
+
+                <div class="features-card">
+                    <img src="assets/nft8.jpg" alt="NFT">
+                </div>
+
+                <div class="features-card">
+                    <img src="assets/nft9.jpg" alt="NFT">
+                </div>
+
+                <div class="features-card">
+                    <img src="assets/nft4.jpg" alt="NFT">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="faq">
 
     <div class="section-title reveal">
-        <span>Gallery</span>
-        <h2>Exclusive NFT Collection</h2>
-        <p>A curated selection of the finest digital art on the platform.</p>
+        <span>SUPPORT</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>
+            Everything you need to know about NFTs, wallets,
+            transactions, and how Farini’s works.
+        </p>
     </div>
 
-    <div class="masonry-gallery">
+    <div class="faq-container reveal">
 
-        <div class="gallery-item tall">
-            <img src="assets/gallery1.webp" alt="">
-            <div class="gallery-overlay"><h4>Outlaw</h4><p>2.10 ETH</p></div>
+        <div class="faq-item active">
+            <button class="faq-question">
+
+                <div class="faq-left">
+                    <span class="faq-number">01</span>
+                    <h3>What is an NFT?</h3>
+                </div>
+
+                <i class='bx bx-plus'></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    NFTs are unique digital assets stored on the blockchain.
+                    They can represent digital art, collectibles, music,
+                    virtual items, and more.
+                </p>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="assets/gallery2.webp" alt="">
-            <div class="gallery-overlay"><h4>Blue Face</h4><p>1.25 ETH</p></div>
+        <div class="faq-item">
+            <button class="faq-question">
+
+                <div class="faq-left">
+                    <span class="faq-number">02</span>
+                    <h3>How do I buy an NFT?</h3>
+                </div>
+
+                <i class='bx bx-plus'></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Simply connect your crypto wallet, browse the marketplace,
+                    and purchase NFTs securely using cryptocurrency.
+                </p>
+            </div>
         </div>
 
-        <div class="gallery-item wide">
-            <img src="assets/gallery3.webp" alt="">
-            <div class="gallery-overlay"><h4>Digital Dream</h4><p>0.95 ETH</p></div>
+        <div class="faq-item">
+            <button class="faq-question">
+
+                <div class="faq-left">
+                    <span class="faq-number">03</span>
+                    <h3>Which wallet should I use?</h3>
+                </div>
+
+                <i class='bx bx-plus'></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Popular options include MetaMask, Coinbase Wallet,
+                    and Trust Wallet. Farini’s supports major Web3 wallets.
+                </p>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="assets/gallery4.webp" alt="">
-            <div class="gallery-overlay"><h4>Carrot #001</h4><p>0.8 ETH</p></div>
-        </div>
+        <div class="faq-item">
+            <button class="faq-question">
 
-        <div class="gallery-item tall">
-            <img src="assets/gallery5.webp" alt="">
-            <div class="gallery-overlay"><h4>llama 333</h4><p>1.8 ETH</p></div>
-        </div>
+                <div class="faq-left">
+                    <span class="faq-number">04</span>
+                    <h3>Are transactions secure?</h3>
+                </div>
 
-        <div class="gallery-item">
-            <img src="assets/gallery6.webp" alt="">
-            <div class="gallery-overlay"><h4>Meta Horse</h4><p>0.65 ETH</p></div>
-        </div>
+                <i class='bx bx-plus'></i>
+            </button>
 
-        <div class="gallery-item wide">
-            <img src=" assets/gallery7.webp" alt="">
-            <div class="gallery-overlay"><h4>Monarog</h4><p>1.4 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery8.webp" alt="">
-            <div class="gallery-overlay"><h4>AI Vision</h4><p>0.92 ETH</p></div>
-        </div>
-
-        <div class="gallery-item tall">
-            <img src="assets/gallery9.webp" alt="">
-            <div class="gallery-overlay"><h4>Red Face</h4><p>2.8 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery10.webp" alt="">
-            <div class="gallery-overlay"><h4>Abstract Creator</h4><p>0.73 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery11.webp" alt="">
-            <div class="gallery-overlay"><h4>World Flow</h4><p>1.12 ETH</p></div>
-        </div>
-
-        <div class="gallery-item wide">
-            <img src="assets/gallery12.webp" alt="">
-            <div class="gallery-overlay"><h4>Quantum</h4><p>3.2 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery13.webp" alt="">
-            <div class="gallery-overlay"><h4>Dark Robot</h4><p>1.05 ETH</p></div>
-        </div>
-
-        <div class="gallery-item tall">
-            <img src="assets/gallery14.webp" alt="">
-            <div class="gallery-overlay"><h4>Doke Ape</h4><p>2.3 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery15.webp" alt="">
-            <div class="gallery-overlay"><h4>Infinity</h4><p>0.9 ETH</p></div>
-        </div>
-
-        <div class="gallery-item wide">
-            <img src="assets/gallery16.webp" alt="">
-            <div class="gallery-overlay"><h4>Neo Rat</h4><p>4.1 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery17.webp" alt="">
-            <div class="gallery-overlay"><h4>Blue Matrix</h4><p>1.7 ETH</p></div>
-        </div>
-
-        <div class="gallery-item tall">
-            <img src="assets/gallery18.webp" alt="">
-            <div class="gallery-overlay"><h4>Meta Beast</h4><p>2.7 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery19.webp" alt="">
-            <div class="gallery-overlay"><h4>Future Code</h4><p>1.3 ETH</p></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/gallery20.webp" alt="">
-            <div class="gallery-overlay"><h4>Galaxy Core</h4><p>0.88 ETH</p></div>
+            <div class="faq-answer">
+                <p>
+                    Yes. All transactions are secured through blockchain
+                    technology and encrypted wallet authentication.
+                </p>
+            </div>
         </div>
 
     </div>
+
 </section>
+
+
+
+    <section class="gallery" id="gallery">
+        <div class="section-title reveal">
+            <span>Gallery</span>
+            <h2>Exclusive NFT Collection</h2>
+            <p>A curated selection of the finest digital art on the platform.</p>
+        </div>
+
+        <div class="masonry-gallery">
+            <div class="gallery-item tall">
+                <img src="assets/gallery1.webp" alt="Outlaw">
+                <div class="gallery-overlay"><h4>Outlaw</h4><p>2.10 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery2.webp" alt="Blue Face">
+                <div class="gallery-overlay"><h4>Blue Face</h4><p>1.25 ETH</p></div>
+            </div>
+            <div class="gallery-item tall">
+                <img src="assets/gallery5.webp" alt="llama 333">
+                <div class="gallery-overlay"><h4>llama 333</h4><p>1.8 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery6.webp" alt="Meta Horse">
+                <div class="gallery-overlay"><h4>Meta Horse</h4><p>0.65 ETH</p></div>
+            </div>
+            <div class="gallery-item wide">
+                <img src="assets/gallery7.webp" alt="Monarog">
+                <div class="gallery-overlay"><h4>Monarog</h4><p>1.4 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery8.webp" alt="AI Vision">
+                <div class="gallery-overlay"><h4>AI Vision</h4><p>0.92 ETH</p></div>
+            </div>
+            <div class="gallery-item tall">
+                <img src="assets/gallery9.webp" alt="Red Face">
+                <div class="gallery-overlay"><h4>Red Face</h4><p>2.8 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery10.webp" alt="Abstract Creator">
+                <div class="gallery-overlay"><h4>Abstract Creator</h4><p>0.73 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery11.webp" alt="World Flow">
+                <div class="gallery-overlay"><h4>World Flow</h4><p>1.12 ETH</p></div>
+            </div>
+            <div class="gallery-item wide">
+                <img src="assets/gallery12.webp" alt="Quantum">
+                <div class="gallery-overlay"><h4>Quantum</h4><p>3.2 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery13.webp" alt="Dark Robot">
+                <div class="gallery-overlay"><h4>Dark Robot</h4><p>1.05 ETH</p></div>
+            </div>
+            <div class="gallery-item tall">
+                <img src="assets/gallery14.webp" alt="Doke Ape">
+                <div class="gallery-overlay"><h4>Doke Ape</h4><p>2.3 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery15.webp" alt="Infinity">
+                <div class="gallery-overlay"><h4>Infinity</h4><p>0.9 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery17.webp" alt="Blue Matrix">
+                <div class="gallery-overlay"><h4>Blue Matrix</h4><p>1.7 ETH</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/gallery20.webp" alt="Galaxy Core">
+                <div class="gallery-overlay"><h4>Galaxy Core</h4><p>0.88 ETH</p></div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ===========================
+     TRADES / EXCHANGE SECTION
+=========================== -->
+<section class="trades" id="trades">
+
+    <div class="section-title reveal">
+        <span>Marketplace</span>
+        <h2>Secure NFT Trading</h2>
+        <p>
+            Exchange rare collectibles with verified owners through a fast,
+            transparent and community-driven marketplace.
+        </p>
+    </div>
+
+    <div class="trades-grid reveal-stagger">
+
+        <!-- CARD -->
+        <div class="trade-card">
+            <div class="trade-top">
+                <div class="trade-user">
+                    <div class="trade-avatar">A</div>
+
+                    <div>
+                        <h3>Alex Morgan</h3>
+                        <span>Verified Collector</span>
+                    </div>
+                </div>
+
+                <div class="trade-status">
+                    Live
+                </div>
+            </div>
+
+            <div class="trade-center">
+                <div class="trade-box">
+                    <small>Offering</small>
+                    <h4>Cyber Ape #021</h4>
+                    <span>2.8 ETH</span>
+                </div>
+
+                <div class="trade-arrow">
+                    ⇄
+                </div>
+
+                <div class="trade-box">
+                    <small>Requesting</small>
+                    <h4>Meta Skull #881</h4>
+                    <span>3.1 ETH</span>
+                </div>
+            </div>
+
+            <button class="btn-primary">
+                View Trade
+            </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="trade-card featured">
+            <div class="trade-top">
+                <div class="trade-user">
+                    <div class="trade-avatar">J</div>
+
+                    <div>
+                        <h3>James Carter</h3>
+                        <span>Top Trader</span>
+                    </div>
+                </div>
+
+                <div class="trade-status active">
+                    Popular
+                </div>
+            </div>
+
+            <div class="trade-center">
+                <div class="trade-box">
+                    <small>Offering</small>
+                    <h4>Neon Monkey #144</h4>
+                    <span>5.4 ETH</span>
+                </div>
+
+                <div class="trade-arrow">
+                    ⇄
+                </div>
+
+                <div class="trade-box">
+                    <small>Requesting</small>
+                    <h4>Dark Pixel #772</h4>
+                    <span>5.1 ETH</span>
+                </div>
+            </div>
+
+            <button class="btn-primary">
+                Start Exchange
+            </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="trade-card">
+            <div class="trade-top">
+                <div class="trade-user">
+                    <div class="trade-avatar">L</div>
+
+                    <div>
+                        <h3>Lucas Reed</h3>
+                        <span>Community Member</span>
+                    </div>
+                </div>
+
+                <div class="trade-status">
+                    Open
+                </div>
+            </div>
+
+            <div class="trade-center">
+                <div class="trade-box">
+                    <small>Offering</small>
+                    <h4>Future Bot #390</h4>
+                    <span>1.7 ETH</span>
+                </div>
+
+                <div class="trade-arrow">
+                    ⇄
+                </div>
+
+                <div class="trade-box">
+                    <small>Requesting</small>
+                    <h4>Galaxy Punk #019</h4>
+                    <span>1.9 ETH</span>
+                </div>
+            </div>
+
+            <button class="btn-outline">
+                Make Offer
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
     <footer>
         <div class="footer-top">
             <div class="footer-brand">
@@ -270,15 +520,23 @@
             <div class="footer-links">
                 <div class="footer-column">
                     <h3>Marketplace</h3>
-                    <a href="#">Explore</a><a href="#">Trending</a><a href="#">Collections</a><a href="#">Auctions</a>
+                    <a href="#">Explore</a>
+                    <a href="#">Trending</a>
+                    <a href="#">Collections</a>
+                    <a href="#">Auctions</a>
                 </div>
                 <div class="footer-column">
                     <h3>Company</h3>
-                    <a href="../About/about.html">About</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Contact</a>
+                    <a href="../About/about.html">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
                 </div>
                 <div class="footer-column">
                     <h3>Social</h3>
-                    <a href="https://www.instagram.com/henrifarini/" target="_blank">Instagram</a><a href="https://twitter.com" target="_blank">Twitter</a><a href="https://discord.com" target="_blank">Discord</a>
+                    <a href="https://www.instagram.com/henrifarini/" target="_blank">Instagram</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://discord.com" target="_blank">Discord</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farini's Access</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+</head>
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <!-- AUTH -->
+    <section class="auth-section">
+
+        <div class="auth-container">
+
+            <!-- LEFT -->
+            <div class="auth-left">
+
+                <div class="auth-badge">
+                    <i class="ri-shield-star-line"></i>
+                    Exclusive Access
+                </div>
+
+                <h1>
+                    Join the next
+                    <span>digital collection</span>
+                </h1>
+
+                <p>
+                    Access your account, explore exclusive NFTs,
+                    trade assets and unlock premium experiences
+                    inside the Farini’s ecosystem.
+                </p>
+
+                <div class="auth-stats">
+
+                    <div class="auth-stat">
+                        <h3>12K+</h3>
+                        <span>Collectors</span>
+                    </div>
+
+                    <div class="auth-stat">
+                        <h3>4.9★</h3>
+                        <span>Community Rating</span>
+                    </div>
+
+                    <div class="auth-stat">
+                        <h3>320+</h3>
+                        <span>Rare NFTs</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="auth-right">
+
+                <!-- TABS -->
+                <div class="auth-tabs">
+
+                    <button class="tab-btn active" data-tab="login">
+                        Login
+                    </button>
+
+                    <button class="tab-btn" data-tab="register">
+                        Get Started
+                    </button>
+
+                    <div class="tab-indicator"></div>
+
+                </div>
+
+                <!-- LOGIN -->
+                <form class="auth-form active" id="loginForm">
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+
+                        <div class="input-box">
+                            <i class="ri-mail-line"></i>
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+
+                        <div class="input-box">
+                            <i class="ri-lock-line"></i>
+                            <input type="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+
+                    <div class="auth-options">
+
+                        <label class="remember">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+
+                        <a href="#">Forgot password?</a>
+
+                    </div>
+
+                    <button class="submit-btn">
+                        Access Account
+                    </button>
+
+                </form>
+
+                <!-- REGISTER -->
+                <form class="auth-form" id="registerForm">
+
+                    <div class="input-group">
+                        <label>Full Name</label>
+
+                        <div class="input-box">
+                            <i class="ri-user-line"></i>
+                            <input type="text" placeholder="Enter your full name">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+
+                        <div class="input-box">
+                            <i class="ri-mail-line"></i>
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+
+                        <div class="input-box">
+                            <i class="ri-lock-line"></i>
+                            <input type="password" placeholder="Create a password">
+                        </div>
+                    </div>
+
+                    <button class="submit-btn">
+                        Create Account
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="auth.js"></script>
+
+</body>
+</html>
