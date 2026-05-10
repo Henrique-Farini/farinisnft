@@ -150,7 +150,19 @@ button {
 .btn-primary {
     background-color: var(--blue);
     color: var(--white);
+    
     border: 2px solid var(--blue);
+}
+.links .btn-primary {
+    background: var(--blue);
+    color: #fff !important;
+    border: 2px solid var(--blue);
+}
+
+.links .btn-primary:hover {
+    background: var(--blue-mid);
+    border-color: var(--blue-mid);
+    color: #fff !important;
 }
 
 .btn-primary:hover {
